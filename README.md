@@ -49,3 +49,6 @@
 - Usar **`terraform fmt`** y **`terraform validate`** para mantener un código limpio y coherente.
 
 ---
+
+## 📚 Referencias
+- [Terraform - Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
