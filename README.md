@@ -27,16 +27,16 @@
 
 ## ⚙️ Estructura del repositorio
 
-📁 Recurso-Azure                     # Servicio específico de Azure
- ├── /nombre-demo-azure              # Nombre que describe la demo 
+📁 Recurso-Azure                     # Servicio específico de Azure  
+ ├── /nombre-demo-azure              # Nombre que describe la demo  
  │      ├── main.tf                  # Configuración principal  de Terraform  
- │      ├── variables.tf             # Variables utilizadas  
+ │      ├── variables.tf             # Variables utilizadas    
  │      ├── outputs.tf               # Salidas de Terraform  
  │      ├── providers.tf             # Configuración del proveedor (Azure)  
- │      ├── README.md                # Explicación del ejemplo  
- │      └── terraform.tfvars         # Valores para las variables
- └── ...                             # Más ejemplos
-📁 modules                           # Módulos reutilizables
+ │      ├── README.md                # Explicación del ejemplo   
+ │      └── terraform.tfvars         # Valores para las variables  
+ └── ...                             # Más ejemplos  
+📁 modules                           # Módulos reutilizables  
 📄 README.md                         # Explicación general del repositorio  
  
 ---
