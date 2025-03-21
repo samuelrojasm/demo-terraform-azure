@@ -26,7 +26,7 @@
 ---
 
 ## ⚙️ Estructura del repositorio
-
+```
 📁 Recurso-Azure                     # Servicio específico de Azure  
  ├── /nombre-demo-azure              # Nombre que describe la demo  
  │      ├── main.tf                  # Configuración principal  de Terraform  
@@ -38,6 +38,7 @@
  └── ...                             # Más ejemplos  
 📁 modules                           # Módulos reutilizables  
 📄 README.md                         # Explicación general del repositorio  
+```
  
 ---
 
