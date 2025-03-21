@@ -42,7 +42,7 @@
 
 ---
 
-## Prácticas recomendadas
+## 🎯 Prácticas recomendadas
 
 - Usar variables y archivos **`.tfvars`** para manejar configuraciones reutilizables.
 - Aplicar módulos para evitar repetición de código.
