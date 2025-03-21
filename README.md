@@ -10,18 +10,17 @@
 - Azure CLI instalado:
 ```bash
 brew install azure-cli
-az login
 ```
 - Login 
     - Método interactivo (usando el navegador)
-```bash
-az login
-```
+        ```bash
+        az login
+        ```
     - Método con autenticación interactiva en CLI (sin navegador)
-```bash
-az login --use-device-code
-```
-
+        ```bash
+        az login --use-device-code
+        ```
+        
 ---
 
 
