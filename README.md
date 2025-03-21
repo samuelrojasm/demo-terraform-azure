@@ -39,13 +39,13 @@
 📁 modules                           # Módulos reutilizables  
 📄 README.md                         # Explicación general del repositorio  
 ```
- 
+
 ---
 
 ## Prácticas recomendadas
 
 - Usar variables y archivos **`.tfvars`** para manejar configuraciones reutilizables.
 - Aplicar módulos para evitar repetición de código.
-- Usar `terraform fmt` y `terraform validate` para mantener un código limpio y coherente.
+- Usar **`terraform fmt`** y **`terraform validate`** para mantener un código limpio y coherente.
 
 ---
