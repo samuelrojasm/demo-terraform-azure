@@ -1,3 +1,5 @@
+# Difinción de variables para que el código sea flexible
+
 variable "resource_group_name" {
   description = "Nombre del grupo de recursos"
   type        = string
