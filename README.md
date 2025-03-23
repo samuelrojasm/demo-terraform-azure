@@ -43,10 +43,10 @@
 ---
 # Uso de comandos de Terraform
 - Inicializa y aplica la infraestructura
-```bash
-terraform init 
-terraform apply
-```
+    ```bash
+    terraform init 
+    terraform apply
+    ```
 
 - Versión específica del proveedor que Terraform ha seleccionado
 ```bash
