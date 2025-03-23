@@ -55,7 +55,7 @@
 - Aplica formato y valida la configuración
     ```bash
     terraform fmt
-     terraform validate
+    terraform validate
     ```
 
 - Aplica la configuración de Terraform
