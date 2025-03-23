@@ -41,6 +41,24 @@
 ```
 
 ---
+# Uso de comandos de Terraform
+- Inicializa y aplica la infraestructura
+```bash
+terraform init 
+terraform apply
+```
+
+- Versión específica del proveedor que Terraform ha seleccionado
+```bash
+terraform providers
+```
+
+- Destruye la infraestructura si ya no se requiere
+```bash
+terraform destroy
+```
+
+---
 
 ## 🎯 Prácticas recomendadas
 
