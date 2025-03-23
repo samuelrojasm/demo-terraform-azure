@@ -42,15 +42,33 @@
 
 ---
 # Uso de comandos de Terraform
-- Inicializa y aplica la infraestructura
+- Inicializa lq configuración de Terraform
     ```bash
-    terraform init 
-    terraform apply
+    terraform init
     ```
 
 - Versión específica del proveedor que Terraform ha seleccionado
     ```bash
     terraform providers
+    ```
+
+- Aplica formato y valida la configuración
+    ```bash
+    terraform fmt
+     terraform validate
+    ```
+
+- Aplica la configuración de Terraform
+    ```bash
+    terraform apply
+    ```
+
+- Inspeccionar el estado
+    ```bash
+     # Estado actual
+    terraform show
+     # Listar los recursos creados
+    terraform state list
     ```
 
 - Destruye la infraestructura si ya no se requiere
@@ -70,5 +88,7 @@
 
 ## 📚 Referencias
 - [Terraform - Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Define your naming convention](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
+- [Build Azure infrastructure](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/azure-build)
 
 ---
