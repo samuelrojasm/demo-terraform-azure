@@ -49,14 +49,14 @@
     ```
 
 - Versión específica del proveedor que Terraform ha seleccionado
-```bash
-terraform providers
-```
+    ```bash
+    terraform providers
+    ```
 
 - Destruye la infraestructura si ya no se requiere
-```bash
-terraform destroy
-```
+    ```bash
+    terraform destroy
+    ```
 
 ---
 
