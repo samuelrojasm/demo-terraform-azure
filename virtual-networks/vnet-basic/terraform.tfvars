@@ -1,5 +1,7 @@
 # Asignación de valores a las varibales
 
-location = "eastus"
-vnet_name = "vnet-demo-${var.location}-001"
-subnet_name = "snet-demo-${var.location}-001"
+location    = "eastus"
+project     = "demo"
+
+vnet_name   = "vnet-${var.project}-${var.location}-001"
+subnet_name = "snet-${var.project}-${var.location}-001"

@@ -9,13 +9,6 @@ variable "resource_group_name" {
 variable "location" {
   description = "Ubicación de la VNet"
   type        = string
-  default     = "eastus"
-}
-
-variable "vnet_name" {
-  description = "Nombre de la VNet"
-  type        = string
-  default     = "vnet-demo-001"
 }
 
 variable "vnet_address_space" {
@@ -24,20 +17,26 @@ variable "vnet_address_space" {
   default     = ["10.0.0.0/16"]
 }
 
-variable "subnet_name" {
-  description = "Nombre de la subred"
-  type        = string
-  default     = "snet-demo-001"
-}
-
 variable "subnet_prefix" {
   description = "Prefijo de la subred"
   type        = list(string)
   default     = ["10.0.1.0/24"]
 }
 
-variable "prefix" {
-  description = "El prefijo usado para todos los recursos"
-  type = string
-  default = ""
+variable "project" {
+  description = "Proposito de los recursos"
+  type        = string
+}
+
+# Nombres generados dinámicamente 
+variable "vnet_name" {
+  description = "Nombre de la VNet"
+  type        = string
+  default     = ""
+}
+
+variable "subnet_name" {
+  description = "Nombre de la subred"
+  type        = string
+  default     = ""
 }
