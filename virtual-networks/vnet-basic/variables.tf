@@ -3,7 +3,7 @@
 variable "resource_group_name" {
   description = "Nombre del grupo de recursos"
   type        = string
-  default     = "rg-vnet-demo"
+  default     = "rg-vnet-demo-001"
 }
 
 variable "location" {
@@ -15,7 +15,7 @@ variable "location" {
 variable "vnet_name" {
   description = "Nombre de la VNet"
   type        = string
-  default     = "vnet-demo"
+  default     = "vnet-demo-${var.location}-001"
 }
 
 variable "vnet_address_space" {
@@ -27,11 +27,17 @@ variable "vnet_address_space" {
 variable "subnet_name" {
   description = "Nombre de la subred"
   type        = string
-  default     = "subnet-demo"
+  default     = "snet-demo-${var.location}-001"
 }
 
 variable "subnet_prefix" {
   description = "Prefijo de la subred"
   type        = list(string)
   default     = ["10.0.1.0/24"]
+}
+
+variable "prefix" {
+  description = "El prefijo usado para todos los recursos"
+  type = string
+  default = ""
 }
