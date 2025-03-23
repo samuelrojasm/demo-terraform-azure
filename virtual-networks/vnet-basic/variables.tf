@@ -15,7 +15,7 @@ variable "location" {
 variable "vnet_name" {
   description = "Nombre de la VNet"
   type        = string
-  default     = "vnet-demo-${var.location}-001"
+  default     = "vnet-demo-001"
 }
 
 variable "vnet_address_space" {
@@ -27,7 +27,7 @@ variable "vnet_address_space" {
 variable "subnet_name" {
   description = "Nombre de la subred"
   type        = string
-  default     = "snet-demo-${var.location}-001"
+  default     = "snet-demo-001"
 }
 
 variable "subnet_prefix" {
