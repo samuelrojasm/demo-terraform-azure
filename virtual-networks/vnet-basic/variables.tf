@@ -1,11 +1,5 @@
 # Difinción de variables para que el código sea flexible
 
-variable "resource_group_name" {
-  description = "Nombre del grupo de recursos"
-  type        = string
-  default     = "rg-vnet-demo-001"
-}
-
 variable "location" {
   description = "Ubicación de la VNet"
   type        = string
@@ -23,8 +17,13 @@ variable "subnet_prefix" {
   default     = ["10.0.1.0/24"]
 }
 
-variable "project" {
-  description = "Proposito de los recursos"
+variable "purpose" {
+  description = "Proposito de los recursos (demo,lab,dev,prod)"
+  type        = string
+}
+
+variable "service" {
+  description = "Nombre del servicio"
   type        = string
 }
 
@@ -37,6 +36,12 @@ variable "vnet_name" {
 
 variable "subnet_name" {
   description = "Nombre de la subred"
+  type        = string
+  default     = ""
+}
+
+variable "resource_group_name" {
+  description = "Nombre del grupo de recursos"
   type        = string
   default     = ""
 }
