@@ -1,5 +1,5 @@
 # Asignación de valores a las varibales
 
 location = "eastus"
-service = "vnet"
-purpose =  "demo"
+service  = "vnet"
+purpose  = "demo"

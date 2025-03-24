@@ -3,8 +3,8 @@
 # Generar nombres dinámicos
 locals {
   resource_group_name = "rg-${var.service}-${var.purpose}-001"
-  vnet_name   = "vnet-${var.purpose}-${var.location}-001"
-  subnet_name = "snet-${var.purpose}-${var.location}-001"
+  vnet_name           = "vnet-${var.purpose}-${var.location}-001"
+  subnet_name         = "snet-${var.purpose}-${var.location}-001"
 }
 
 # Grupo de recursos
