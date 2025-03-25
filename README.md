@@ -8,7 +8,10 @@
 
 ## 🚀 **Requisitos**
 - [Terraform](https://developer.hashicorp.com/terraform/downloads)
-- Cuenta de **Azure** con permisos adecuados
+- Cuenta de **Azure** con permisos adecuados:
+    - En mi caso uso un usuario de Aazure con el rol: "Contributor" de Azure RBAC (Role-Based Access Control)
+    - Este rol se asigna en: ```Azure subscription -> Access control (IAM) -> Add role assignment -> Role -> Privileged administrator roles```
+
 - Azure CLI instalado:
     ```bash
     brew install azure-cli
@@ -92,5 +95,6 @@
 - [Build Azure infrastructure](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/azure-build)
 - [Azure regions](https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/)
 - [Azure regions mapping list](https://github.com/claranet/terraform-azurerm-regions/blob/master/REGIONS.md)
+- [Azure classic subscription administrators](https://learn.microsoft.com/en-us/azure/role-based-access-control/classic-administrators)
 
 ---
