@@ -25,7 +25,10 @@
         ```bash
         az login --use-device-code
         ```
-
+- Configurar las variables de entorno:
+    ```bash
+    export ARM_SUBSCRIPTION_ID="<SUBSCRIPTION_ID>"
+    ```
 ---
 
 ## ⚙️ Estructura del repositorio
