@@ -9,7 +9,7 @@
 ## 🚀 **Requisitos**
 - [Terraform](https://developer.hashicorp.com/terraform/downloads)
 - Cuenta de **Azure** con permisos adecuados:
-    - En mi caso uso un usuario de Aazure con el rol: **```Contributor```** de Azure RBAC (Role-Based Access Control)
+    - En mi caso uso un usuario de Azure con el rol: **```Contributor```** de Azure RBAC (Role-Based Access Control)
     - Este rol se asigna en: ```Azure subscription -> Access control (IAM) -> Add role assignment -> Role -> Privileged administrator roles```
 
 - Azure CLI instalado:
@@ -25,7 +25,7 @@
         ```bash
         az login --use-device-code
         ```
-- Configurar las variables de entorno:
+- Configurar la variable de entorno:
     ```bash
     export ARM_SUBSCRIPTION_ID="<SUBSCRIPTION_ID>"
     ```
