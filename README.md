@@ -6,6 +6,12 @@
 
 ---
 
+## 📂 Contenido
+### Ejemplos Virtual Networks (VNet)
+- [Virtual Network con una subnet](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/virtual-networks/vnet-basic)
+### Ejemplos Virtual Machine (VM)
+- []()
+
 ## 🚀 **Requisitos**
 - [Terraform](https://developer.hashicorp.com/terraform/downloads)
 - Cuenta de **Azure** con permisos adecuados:

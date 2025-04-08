@@ -1,3 +1,8 @@
-## Demo: Virtual Network
-### Objetivo
-- Este ejemplo provisiona una Virtual Network con una Subnet
+## 🛠️ Demo: Virtual Network
+
+## 🎯 Objetivo (Target)
+- Este ejemplo provisiona los soiguientes recursos:
+    - 1 Virtual Network
+    - 1 Subnet
+
+---
