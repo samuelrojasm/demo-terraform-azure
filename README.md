@@ -1,5 +1,9 @@
 # 🛠️ Terraform Microsoft Azure Demos 
 
+[![Azure](https://badgen.net/badge/icon/azure?icon=azure&label)](https://azure.microsoft.com)
+[![Terraform](https://img.shields.io/badge/IaC-Terraform-623CE4?logo=terraform&logoColor=white)](#)
+[![HCL](https://img.shields.io/badge/Language-HCL-blueviolet)](#)
+
 - Este repositorio contiene una serie de demos prácticas que muestran cómo utilizar Terraform para desplegar y gestionar recursos en **Microsoft Azure**. 
 - El objetivo es proporcionar ejemplos básicos y avanzados que sirvan como referencia para implementar infraestructuras reproducibles y escalables.
 - Cada demo cubre un escenario específico, desde configuraciones básicas hasta despliegues más avanzados.
@@ -53,7 +57,8 @@
 ```
 
 ---
-# Uso de comandos de Terraform
+
+## 💻 Uso de comandos de Terraform
 - Inicializa lq configuración de Terraform
     ```bash
     terraform init
@@ -95,6 +100,28 @@
 - Usar variables y archivos **`.tfvars`** para manejar configuraciones reutilizables.
 - Aplicar módulos para evitar repetición de código.
 - Usar **`terraform fmt`** y **`terraform validate`** para mantener un código limpio y coherente.
+
+---
+
+## 🔐 Acceso a Virtual Machine con Microsoft Entra ID login
+-Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD), es necesario configurar inicio de sesión con **Entra ID para la VM**. -Esto permite autenticarse a través de identidades corporativas en lugar de usar credenciales locales como usuario/contraseña o claves SSH. 
+### Requisitos previos
+- Tener una cuenta con permisos suficientes en la VM.
+- La VM debe estar unida a Microsoft Entra ID.
+- Estar utilizando una imagen de Windows Server 2019 o posterior o Ubuntu 20.04 o posterior.
+- Tener Azure CLI instalado y autenticado (az login).
+### Paso 1: Habilitar Entra ID Login en la VM
+- Extensión para Linux
+    ```bash
+    AADSSHLoginForLinux
+    ```
+- Extensión para Windows
+    ```bash
+    AADLoginForWindows
+    ```
+### Paso 2: Asignar roles Entra ID al usuario
+
+
 
 ---
 
