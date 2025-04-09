@@ -104,7 +104,7 @@
 ---
 
 ## 🔐 Acceso a Virtual Machine con Microsoft Entra ID login
--Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD), es necesario configurar inicio de sesión con **Entra ID para la VM**. -Esto permite autenticarse a través de identidades corporativas en lugar de usar credenciales locales como usuario/contraseña o claves SSH. 
+- Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD), es necesario configurar inicio de sesión con **Entra ID para la VM**. -Esto permite autenticarse a través de identidades corporativas en lugar de usar credenciales locales como usuario/contraseña o claves SSH. 
 ### Requisitos previos
 - Tener una cuenta con permisos suficientes en la VM.
 - La VM debe estar unida a Microsoft Entra ID.
@@ -120,7 +120,26 @@
     AADLoginForWindows
     ```
 ### Paso 2: Asignar roles Entra ID al usuario
-
+- Asignar uno de los siguientes roles Entra ID al usuario que accederá a la VM:
+    ```bash
+    Virtual Machine Administrator Login (admin remoto)
+     ```
+     ```bash
+    Virtual Machine User Login (usuario remoto sin privilegios de admin)
+    ```
+### Paso 3: Conexión a la VM
+- Para la conexión con Linux
+    1. Instalar el plugin **Azure CLI SSH**
+    ```bash
+    az extension add --name ssh
+    ```
+    2. Conexión
+    ```bash
+    az ssh vm \
+        --name <nombre-vm> \
+        --resource-group <grupo-recursos> \
+        --auth-type AAD
+    ```
 
 
 ---
