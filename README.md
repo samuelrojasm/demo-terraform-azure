@@ -103,7 +103,7 @@
 
 ---
 
-## 🔐 Autenticación Segura con Entra ID a Virtual Machine - Entra ID + RBAC Access
+## 🔐 Autenticación Segura a Virtual Machine con Entra ID + RBAC Access
 - Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD), es necesario configurar inicio de sesión con **Entra ID para la VM**. 
 - Esto permite autenticarse a través de identidades corporativas en lugar de usar credenciales locales como **usuario/contraseña** o **claves SSH**. 
 - **Login with Microsoft Entra ID**: Esta opción habilita el inicio de sesión en la VM usando identidades de Microsoft Entra ID. Permitir que usuarios autenticados por Entra ID accedan a la VM **(RDP o SSH con AAD)**.
@@ -142,22 +142,22 @@
 ### Paso 3: Conexión a la VM
 - Para la conexión con Linux
     1. Instalar el plugin **Azure CLI SSH**
-    ```bash
-    az extension add --name ssh
-    ```
+        ```bash
+        az extension add --name ssh
+        ```
     2. Conexión
-    - Linux: Conectar con Azure CLI
-    ```bash
-    az ssh vm \
-        --name <nombre-vm> \
-        --resource-group <grupo-recursos> \
-        --auth-type AAD
-    ```
-    - Windows: Acceso vía RDP
-    ```bash
-    # Usa las credenciales de Entra ID al conectar por RDP
-    Usuario: AzureAD\usuario@dominio.com
-    ```
+        - Linux: Conectar con Azure CLI
+            ```bash
+            az ssh vm \
+                --name <nombre-vm> \
+                --resource-group <grupo-recursos> \
+                --auth-type AAD
+            ```
+        - Windows: Acceso vía RDP
+            ```bash
+            # Usa las credenciales de Entra ID al conectar por RDP
+            Usuario: AzureAD\usuario@dominio.com
+            ```
 ---
 
 ## 📚 Referencias
