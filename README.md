@@ -103,8 +103,18 @@
 
 ---
 
-## 🔐 Acceso a Virtual Machine con Microsoft Entra ID login
-- Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD), es necesario configurar inicio de sesión con **Entra ID para la VM**. -Esto permite autenticarse a través de identidades corporativas en lugar de usar credenciales locales como usuario/contraseña o claves SSH. 
+## 🔐 Autenticación Segura con Entra ID a Virtual Machine - Entra ID + RBAC Access
+- Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD), es necesario configurar inicio de sesión con **Entra ID para la VM**. 
+- Esto permite autenticarse a través de identidades corporativas en lugar de usar credenciales locales como **usuario/contraseña** o **claves SSH**. 
+- **Login with Microsoft Entra ID**: Esta opción habilita el inicio de sesión en la VM usando identidades de Microsoft Entra ID. Permitir que usuarios autenticados por Entra ID accedan a la VM **(RDP o SSH con AAD)**.
+- **Enable system assigned managed identity**: Crea una identidad administrada asignada por el sistema (Managed Identity) ligada a la VM. Esta identidad puede usarse para autenticarse en servicios de Azure sin necesidad de credenciales.
+
+### Ventajas
+- Sin gestión de claves privadas
+- Acceso controlado mediante RBAC
+- Auditoría centralizada en Entra ID
+- Compatible con `az ssh` para Linux o RDP para Windows
+
 ### Requisitos previos
 - Tener una cuenta con permisos suficientes en la VM.
 - La VM debe estar unida a Microsoft Entra ID.
@@ -122,10 +132,12 @@
 ### Paso 2: Asignar roles Entra ID al usuario
 - Asignar uno de los siguientes roles Entra ID al usuario que accederá a la VM:
     ```bash
-    Virtual Machine Administrator Login (admin remoto)
+    # admin remoto, acceso con permisos elevados
+    Virtual Machine Administrator Login
      ```
      ```bash
-    Virtual Machine User Login (usuario remoto sin privilegios de admin)
+    # usuario remoto sin privilegios de admin, acceso limitado
+    Virtual Machine User Login
     ```
 ### Paso 3: Conexión a la VM
 - Para la conexión con Linux
@@ -134,14 +146,18 @@
     az extension add --name ssh
     ```
     2. Conexión
+    - Linux: Conectar con Azure CLI
     ```bash
     az ssh vm \
         --name <nombre-vm> \
         --resource-group <grupo-recursos> \
         --auth-type AAD
     ```
-
-
+    - Windows: Acceso vía RDP
+    ```bash
+    # Usa las credenciales de Entra ID al conectar por RDP
+    Usuario: AzureAD\usuario@dominio.com
+    ```
 ---
 
 ## 📚 Referencias
