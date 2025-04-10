@@ -158,14 +158,14 @@
         ```
     2. Conexión
         - Linux: Conectar con Azure CLI
-            ```bash
+            ```azurecli
             az ssh vm \
                 --name <nombre-vm> \
                 --resource-group <grupo-recursos> \
                 --auth-type AAD
             ```
         - Windows: Acceso vía RDP
-            ```bash
+            ```sh
             # Usa las credenciales de Entra ID al conectar por RDP
             Usuario: AzureAD\usuario@dominio.com
             ```
