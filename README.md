@@ -174,9 +174,12 @@
     - Autenticación del usuario con Entra ID
     - Evaluación de permisos RBAC
     - Acceso a la VM mediante az ssh o RDP
-<br>
-![Arquitectura Entra ID + RBAC](assets/imagenes/diagrama_entra_id_RBAC.png)
 
+<br>
+<p align="center">
+  <img src="assets/imagenes/diagrama_entra_id_RBAC.png" alt="Arquitectura Entra ID + RBAC" width="60%">
+</p>
+<br>
 
 ---
 
