@@ -5,10 +5,10 @@ output "resource_group_name" {
 }
 
 output "private_ip_address" {
-  value = azurerm_windows_virtual_machine.main.private_ip_address
+  value = azurerm_linux_virtual_machine.vm.private_ip_address
 }
 
 output "admin_password" {
   sensitive = true
-  value     = azurerm_windows_virtual_machine.main.admin_password
+  value     = azurerm_linux_virtual_machine.vm.admin_password
 }
