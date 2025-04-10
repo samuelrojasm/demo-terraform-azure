@@ -104,7 +104,7 @@
 ---
 
 ## 🔐 Autenticación Segura a Virtual Machine con Entra ID + RBAC Access
-- **`Configurar inicio de sesión con **Entra ID para la VM`**: Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD).
+- **`Configurar inicio de sesión con Entra ID para la VM`**: Para acceder a una máquina virtual (VM) en Azure utilizando **Managed Identity** y **Microsoft Entra ID** (anteriormente Azure AD).
 - **`Permite autenticarse a través de identidades corporativas`**: Evita usar credenciales locales como **usuario/contraseña** o **claves SSH**. 
 - **`Login with Microsoft Entra ID`**: Esta opción habilita el inicio de sesión en la VM usando identidades de Microsoft Entra ID. Permitir que usuarios autenticados por Entra ID accedan a la VM **(RDP o SSH con AAD)**.
 - **`Enable system assigned managed identity`**: Crea una identidad administrada asignada por el sistema (Managed Identity) ligada a la VM. Esta identidad puede usarse para autenticarse en servicios de Azure sin necesidad de credenciales.
