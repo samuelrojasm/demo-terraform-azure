@@ -174,9 +174,9 @@
 
 <br>
 
-    - Autenticación del usuario con Entra ID
-    - Evaluación de permisos RBAC
-    - Acceso a la VM mediante az`ssh` o`RDP`
+- Autenticación del usuario con Entra ID
+- Evaluación de permisos RBAC
+- Acceso a la VM mediante az`ssh` o`RDP`
 
 <br>
 <p align="center">
