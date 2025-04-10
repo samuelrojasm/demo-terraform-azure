@@ -129,7 +129,18 @@
     ```bash
     AADLoginForWindows
     ```
-### Paso 2: Asignar roles Entra ID al usuario
+### Paso 2: Habilitar system assigned managed identity (identidad administrada)
+- La extensión AADLogin/AADSSHLogin necesita una identidad asignada a la VM para poder:
+    - Realizar validaciones de token Entra ID,
+    - Consultar permisos (RBAC) en el contexto de la VM,
+    - Hacer llamadas a la API de Entra ID desde la VM.
+- Habilitar una identidad administrada para que la VM acceda de forma segura a otros recursos Azure
+    ```hcl
+    identity {
+        type = "SystemAssigned"
+    }
+    ```
+### Paso 3: Asignar roles Entra ID al usuario
 - Asignar uno de los siguientes roles Entra ID al usuario que accederá a la VM:
     ```bash
     # admin remoto, acceso con permisos elevados
@@ -139,7 +150,7 @@
     # usuario remoto sin privilegios de admin, acceso limitado
     Virtual Machine User Login
     ```
-### Paso 3: Conexión a la VM
+### Paso 4: Conexión a la VM
 - Para la conexión con Linux
     1. Instalar el plugin **Azure CLI SSH**
         ```bash
@@ -158,6 +169,10 @@
             # Usa las credenciales de Entra ID al conectar por RDP
             Usuario: AzureAD\usuario@dominio.com
             ```
+### Diagrama de Arquitectura
+- Este diagrama muestra cómo los usuarios autenticados por Microsoft Entra ID pueden acceder a una VM usando RBAC y la CLI de Azure (`az ssh`).
+![Arquitectura Entra ID](docs/diagrama-acceso-vm.png)
+
 ---
 
 ## 📚 Referencias
@@ -167,5 +182,13 @@
 - [Azure regions](https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/)
 - [Azure regions mapping list](https://github.com/claranet/terraform-azurerm-regions/blob/master/REGIONS.md)
 - [Azure classic subscription administrators](https://learn.microsoft.com/en-us/azure/role-based-access-control/classic-administrators)
+
+## 🔐 Referencias -  Autenticación Segura Entra ID + RBAC Access
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 
 ---
