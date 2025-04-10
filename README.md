@@ -131,9 +131,11 @@
     ```
 ### Paso 2: Habilitar system assigned managed identity (identidad administrada)
 - La extensión AADLogin/AADSSHLogin necesita una identidad asignada a la VM para poder:
-    - Realizar validaciones de token Entra ID,
-    - Consultar permisos (RBAC) en el contexto de la VM,
-    - Hacer llamadas a la API de Entra ID desde la VM.
+
+    - Realizar validaciones de token Entra ID
+    - Consultar permisos (RBAC) en el contexto de la VM
+    - Hacer llamadas a la API de Entra ID desde la VM
+    
 - Habilitar una identidad administrada para que la VM acceda de forma segura a otros recursos Azure
     ```hcl
     identity {
