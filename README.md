@@ -173,7 +173,8 @@
 - Este diagrama muestra cómo los usuarios autenticados por Microsoft Entra ID pueden acceder a una VM usando RBAC y la CLI de Azure (`az ssh`).
     - Autenticación del usuario con Entra ID
     - Evaluación de permisos RBAC
-    - Acceso a la VM mediante az ssh o RDP  
+    - Acceso a la VM mediante az ssh o RDP
+<br>
 ![Arquitectura Entra ID + RBAC](assets/imagenes/diagrama_entra_id_RBAC.png)
 
 
