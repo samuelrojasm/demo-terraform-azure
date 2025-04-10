@@ -45,14 +45,14 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                = "vm-entraid-demo"
-  admin_username      = "azureuser"
-  admin_password       = random_password.password.result
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  name                  = "vm-entraid-demo"
+  admin_username        = "azureuser"
+  admin_password        = random_password.password.result
+  location              = azurerm_resource_group.rg.location
+  resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.nic.id]
-  size                = "Standard_B1ls"
-  
+  size                  = "Standard_B1ls"
+
   # Requisito obligatorio para login con Entra ID
   identity {
     type = "SystemAssigned"
@@ -72,7 +72,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     name                 = "vm-entraid-osdisk"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
-    
+
   }
 
   tags = {
