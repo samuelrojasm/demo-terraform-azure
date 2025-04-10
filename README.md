@@ -158,7 +158,7 @@
         ```
     2. Conexión
         - Linux: Conectar con Azure CLI
-            ```azurecli
+            ```sh
             az ssh vm \
                 --name <nombre-vm> \
                 --resource-group <grupo-recursos> \
