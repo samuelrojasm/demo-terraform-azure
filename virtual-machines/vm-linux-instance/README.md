@@ -25,7 +25,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 
 <br>
 <p align="center">
-  <img src="assets/imagenes/azure_entra_id_grupo_usuario.png" alt="Entra ID Grupo y Usuario" width="70%">
+  <img src="assets/imagenes/azure_entra_id_grupo_usuario.png" alt="Entra ID Grupo y Usuario" width="80%">
 </p>
 <br>
 
