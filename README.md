@@ -180,7 +180,7 @@
 
 <br>
 <p align="center">
-  <img src="assets/imagenes/diagrama_entra_id_RBAC.png" alt="Arquitectura Entra ID + RBAC" width="70%">
+  <img src="assets/imagenes/diagrama_entra_id_RBAC.png" alt="Arquitectura Entra ID + RBAC" width="80%">
 </p>
 <br>
 
