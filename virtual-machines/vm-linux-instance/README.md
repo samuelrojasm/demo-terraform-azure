@@ -23,6 +23,12 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 - Grupo de Entra ID (por ejemplo: grp-vm-user-login)
 - Agregar usuario al grupo
 
+<br>
+<p align="center">
+  <img src="assets/imagenes/azure_entra_id_grupo_usuario.png" alt="Entra ID Grupo y Usuario" width="70%">
+</p>
+<br>
+
 ---
 
 ## 🚀 Resultado (Outcome)
