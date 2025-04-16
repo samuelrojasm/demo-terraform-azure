@@ -1,13 +1,13 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram id="WI9T0HZ2pTsCkuznbFz-" name="VM access Entra Id + RBCA">
-    <mxGraphModel dx="1326" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1575" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="yIlqXNv4PA9Dnh1hxRCn-52" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=none;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="-130" y="320" width="740" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-8" value="Azure verifica&lt;div&gt;que el usuario&amp;nbsp;&lt;/div&gt;&lt;div&gt;tiene el rol&lt;/div&gt;&lt;div&gt;&#39;Virtual Machine&lt;/div&gt;&lt;div&gt;User Login&#39;&lt;/div&gt;" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Key_Vaults.svg;fontColor=#000000;labelBackgroundColor=none;" vertex="1" parent="1">
+        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-8" value="Azure verifica&lt;div&gt;que el usuario&amp;nbsp;&lt;/div&gt;&lt;div&gt;tiene el rol&lt;/div&gt;&lt;div&gt;&#39;Virtual Machine&lt;/div&gt;&lt;div&gt;User Login&#39;&lt;/div&gt;" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/mscae/Key_Vaults.svg;fontColor=#000000;labelBackgroundColor=none;" vertex="1" parent="1">
           <mxGeometry x="366" y="378.88" width="48" height="50" as="geometry" />
         </mxCell>
         <UserObject label="" tags="Fondo" id="PwxTCh5Mb6KXJ-CmKBn5-10">
@@ -15,13 +15,13 @@
             <mxGeometry x="-125.2" y="570" width="139.2" height="60" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-11" value="Usuario con&amp;nbsp;&lt;div&gt;Azure CLI&lt;/div&gt;&lt;div&gt;ejecuta&lt;/div&gt;&lt;div&gt;az ssh vm&amp;nbsp;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Users.svg;labelBackgroundColor=none;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-11" value="Usuario con&amp;nbsp;&lt;div&gt;Azure CLI&lt;/div&gt;&lt;div&gt;ejecuta&lt;/div&gt;&lt;div&gt;az ssh vm&amp;nbsp;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/identity/Users.svg;labelBackgroundColor=none;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="-50" y="377" width="64" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-12" value="Azure CLI&lt;div&gt;verifica sesión&lt;/div&gt;&lt;div&gt;con &#39;az login&#39;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/Azure_A.svg;fontColor=#000000;labelBackgroundColor=none;" vertex="1" parent="1">
-          <mxGeometry x="80" y="371.82000000000005" width="68" height="64.12" as="geometry" />
+        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-12" value="Azure CLI&lt;div&gt;verifica sesión&lt;/div&gt;&lt;div&gt;con &#39;az login&#39;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/other/Azure_A.svg;fontColor=#000000;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="371.82" width="61.7" height="58.18" as="geometry" />
         </mxCell>
-        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-14" value="Microsoft Entra ID&lt;div&gt;autentica&lt;/div&gt;&lt;div&gt;al usuario&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/Entra_Identity.svg;fontColor=#000000;labelBackgroundColor=none;" vertex="1" parent="1">
+        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-14" value="Microsoft Entra ID&lt;div&gt;autentica&lt;/div&gt;&lt;div&gt;al usuario&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/other/Entra_Identity.svg;fontColor=#000000;labelBackgroundColor=none;" vertex="1" parent="1">
           <mxGeometry x="220" y="371.78000000000003" width="68" height="60.440000000000005" as="geometry" />
         </mxCell>
         <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-15" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.06;entryY=0.37;entryDx=0;entryDy=0;entryPerimeter=0;elbow=vertical;startArrow=none;startFill=0;strokeColor=#006EAF;jumpSize=8;arcSize=20;strokeWidth=2;fillColor=#1ba1e2;" edge="1" parent="1">
@@ -60,8 +60,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-23" value="&lt;span style=&quot;&quot;&gt;Establecimiento&lt;/span&gt;&lt;div style=&quot;&quot;&gt;de la conexión SSH&lt;/div&gt;&lt;div style=&quot;&quot;&gt;a la VM sin&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;usar clave pública.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;VM con extensión&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&#39;AADSSHLoginForLinux&#39;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;o&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&#39;AADLoginForWindows&#39;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Virtual_Machine.svg;labelBackgroundColor=none;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="500" y="383.88" width="43.13" height="40" as="geometry" />
+        <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-23" value="&lt;span&gt;Establecimiento&lt;/span&gt;&lt;div&gt;de la conexión SSH&lt;/div&gt;&lt;div&gt;a la VM sin&amp;nbsp;&lt;/div&gt;&lt;div&gt;usar clave pública.&lt;/div&gt;&lt;div&gt;VM con extensión&amp;nbsp;&lt;/div&gt;&lt;div&gt;&#39;AADSSHLoginForLinux&#39;&lt;/div&gt;&lt;div&gt;o&lt;/div&gt;&lt;div&gt;&#39;AADLoginForWindows&#39;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=10;image=img/lib/azure2/compute/Virtual_Machine.svg;labelBackgroundColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="490" y="378.88" width="63.13" height="58.54" as="geometry" />
         </mxCell>
         <mxCell id="PwxTCh5Mb6KXJ-CmKBn5-20" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Security_Center.svg;" vertex="1" parent="1">
           <mxGeometry x="490" y="402.22" width="24.71" height="30" as="geometry" />
