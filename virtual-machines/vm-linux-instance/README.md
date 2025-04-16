@@ -9,6 +9,12 @@ Este ejemplo ejecuta las siguientes acciones:
     - Para permitir que usuarios inicien sesión en la máquina virtual Linux en Azure utilizando credenciales de Microsoft Entra ID y el comando **az ssh vm**
 -  Uso de los proveedores de Azure Resource Manager (**azurerm**) y Microsoft Entra ID (**azuread**).
 
+<br>
+<p align="center">
+  <img src="assets/imagenes/VM_Entra_ID_RBAC.png" alt="Arquitectura Entra ID + RBAC" width="60%">
+</p>
+<br>
+
 ---
 
 ## Prerequisitos
