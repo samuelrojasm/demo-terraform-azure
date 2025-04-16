@@ -11,7 +11,7 @@ Este ejemplo ejecuta las siguientes acciones:
 
 <br>
 <p align="center">
-  <img src="assets/imagenes/VM_Entra_ID_RBAC.png" alt="Arquitectura Entra ID + RBAC" width="60%">
+  <img src="assets/imagenes/VM_Entra_ID_RBAC.png" alt="Arquitectura Entra ID + RBAC" width="80%">
 </p>
 <br>
 
