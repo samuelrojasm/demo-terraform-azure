@@ -23,6 +23,8 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 - Grupo de Entra ID (por ejemplo: grp-vm-user-login)
 - Agregar usuario al grupo
 
+---
+
 ## 🚀 Resultado (Outcome)
 ### Terraform apply
 ![Private Subnet](assets/imagenes/terraform_apply.png)
