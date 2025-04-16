@@ -1,4 +1,4 @@
-## 🛠️  Demo: Azure Virtual Machine
+## 🛠️  Demo: Azure Virtual Machine Linux
 
 ## 🎯 Objetivo (Target)
 Este ejemplo ejecuta las siguientes acciones: 
