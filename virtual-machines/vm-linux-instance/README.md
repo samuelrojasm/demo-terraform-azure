@@ -5,8 +5,10 @@ Este ejemplo ejecuta las siguientes acciones:
 - Activa el acceso a la VM con Microsoft Entra ID (az ssh vm)
     - Para permitir que usuarios inicien sesión en la máquina virtual Linux en Azure utilizando credenciales de Microsoft Entra ID y el comando **az ssh vm**
 - Crea un Grupo de Recursos (RG)
-- Asigna del rol: **"Virtual Machine User Login"** al grupo creado previamente (por ejemplo: grp-vm-user-login)
+- Asigna del rol: **`"Virtual Machine User Login"`** al grupo creado previamente (por ejemplo: grp-vm-user-login)
 - Crea una VM Linux
+- Instalar en la VM la extensión **`AADSSHLoginForLinux`**, permite validar y aceptar las credenciales de Microsoft Entra ID para conexión SSH
+- Activaren en la VM **`System Assigned Managed Identity`**
 -  Uso de los proveedores de Azure Resource Manager (**azurerm**) y Microsoft Entra ID (**azuread**).
 
 <br>
