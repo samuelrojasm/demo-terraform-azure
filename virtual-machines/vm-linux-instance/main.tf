@@ -59,6 +59,7 @@ resource "azurerm_network_interface" "nic" {
 
 resource "azurerm_linux_virtual_machine" "vm" {
   name                  = local.vm_name
+  admin_username        = "azureuser"
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.nic.id]
@@ -79,7 +80,6 @@ resource "azurerm_linux_virtual_machine" "vm" {
   # usar únicamente Entra ID para el acceso
   # (es decir, az ssh vm con credenciales de AAD)
   disable_password_authentication = true
-  admin_username                  = null
   admin_password                  = null # opcional, se puede omitir
 
   #------------------------------------------
