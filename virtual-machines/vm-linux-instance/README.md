@@ -9,7 +9,7 @@ Este ejemplo ejecuta las siguientes acciones:
 - Crea una VM Linux
 - Instalar en la VM la extensión **`AADSSHLoginForLinux`**, permite validar y aceptar las credenciales de Microsoft Entra ID para conexión SSH
 - Activar en la VM **`System Assigned Managed Identity`**
-- Uso de los proveedores de Azure Resource Manager (**azurerm**) y Microsoft Entra ID (**azuread**).
+- Uso de los proveedores de Azure Resource Manager (**`azurerm`**) y Microsoft Entra ID (**`azuread`**).
 
 <br>
 <p align="center">
