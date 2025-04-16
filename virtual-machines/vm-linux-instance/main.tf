@@ -7,6 +7,7 @@ locals {
   subnet_name         = "snet-${var.purpose}-${var.location}-001"
   nic_name            = "nic-${var.purpose}-${var.location}-001"
   vm_name             = "vm-${var.purpose}-${var.location}-001"
+  os_disk_name = "osdisk-${var.purpose}-${var.location}-001"
 }
 
 # Grupo de recursos
