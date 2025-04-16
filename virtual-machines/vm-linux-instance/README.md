@@ -17,7 +17,7 @@ Este ejemplo ejecuta las siguientes acciones:
 
 ---
 
-## Prerequisitos
+## ✅ Prerequisitos
 Previo a la ejecución es necesario tener listo los siguientes recursos:
 - Usuario de Entra ID (por ejemplo: vm-user-login)
 - Grupo de Entra ID (por ejemplo: grp-vm-user-login)
