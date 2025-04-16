@@ -1,9 +1,21 @@
 ## 🛠️  Demo: Azure Virtual Machine
 
 ## 🎯 Objetivo (Target)
-- Creación de una VM Linux
+Este ejemplo ejecuta las siguientes acciones: 
+- Crea un Grupo de Recursos (RG)
+- Asigna del rol: **"Virtual Machine User Login"** al grupo creado previamente (por ejemplo: grp-vm-user-login)
+- Crea una VM Linux
+- Activa el acceso a la VM con Microsoft Entra ID (az ssh vm)
+    - Para permitir que usuarios inicien sesión en la máquina virtual Linux en Azure utilizando credenciales de Microsoft Entra ID y el comando **az ssh vm**
+-  Uso de los proveedores de Azure Resource Manager (**azurerm**) y Microsoft Entra ID (**azuread**).
 
 ---
+
+## Prerequisitos
+Previo a la ejecución es necesario tener listo los siguientes recursos:
+- Usuario de Entra ID (por ejemplo: vm-user-login)
+- Grupo de Entra ID (por ejemplo: grp-vm-user-login)
+- Agregar usuario al grupo
 
 ## 🚀 Resultado (Outcome)
 ### Terraform apply
