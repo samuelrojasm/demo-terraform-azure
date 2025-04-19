@@ -66,16 +66,19 @@ resource "azurerm_linux_virtual_machine" "vm" {
   network_interface_ids = [azurerm_network_interface.nic.id]
   size                  = "Standard_B1ls"
 
+  # Usar un valor “dummy” de clave pública SSH
+  # Proporcionar una clave pública que no usarás realmente, 
+  # solo para satisfacer la validación del provider.
+  admin_ssh_key {
+    username   = "azureuser"
+    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdummykeynotused"
+  }
+
   #------------------------------------------
   # Requisito obligatorio para Entra ID login,
   # acceso únicamente con Microsoft Entra ID + RBAC
   # NO usamos claves SSH
   #------------------------------------------
-
-  # Habilita login con Entra ID
-  admin {
-    azuread_login_enabled = true
-  }
 
   # Activar System Assigned Managed Identity
   identity {
