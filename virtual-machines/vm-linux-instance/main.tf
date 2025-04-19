@@ -25,7 +25,7 @@ data "azuread_group" "vm_user_group" {
 resource "azurerm_role_assignment" "vm_user_login" {
   scope                = azurerm_resource_group.rg.id
   role_definition_name = "Virtual Machine User Login"
-  principal_id         = data.azuread_group.vm_user_group.id
+  principal_id         = data.azuread_group.vm_user_group.object_id
 }
 
 # Virtual Network
@@ -60,7 +60,7 @@ resource "azurerm_network_interface" "nic" {
 
 resource "azurerm_linux_virtual_machine" "vm" {
   name                  = local.vm_name
-  admin_username        = "azureuser"
+  admin_username        = "azureuser" # Requerido aunque no se use para login
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.nic.id]
@@ -71,6 +71,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
   # acceso únicamente con Microsoft Entra ID + RBAC
   # NO usamos claves SSH
   #------------------------------------------
+
+  # Habilita login con Entra ID
+  admin {
+    azuread_login_enabled = true
+  }
 
   # Activar System Assigned Managed Identity
   identity {
@@ -93,7 +98,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
 
   os_disk {
-    name                 = "vm-entraid-osdisk"
+    name                 = local.os_disk_name
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
 
