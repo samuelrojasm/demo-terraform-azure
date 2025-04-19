@@ -60,7 +60,8 @@ resource "azurerm_network_interface" "nic" {
 
 resource "azurerm_linux_virtual_machine" "vm" {
   name                  = local.vm_name
-  admin_username        = "azureuser" # Requerido aunque no se use para login
+  admin_username        = "azureuser"                  # Requerido aunque no se use para login
+  admin_password        = random_password.admin.result # Requerido aunque no se use para login
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.nic.id]
@@ -80,9 +81,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   # Esto indica que no cree una cuenta local, 
   # usar únicamente Entra ID para el acceso
   # (es decir, az ssh vm con credenciales de AAD)
-  disable_password_authentication = false
-  admin_password                  = null # opcional, se puede omitir
-
+  disable_password_authentication = true
   #------------------------------------------
 
   source_image_reference {
@@ -117,4 +116,11 @@ resource "azurerm_virtual_machine_extension" "aad_login" {
   type                       = "AADSSHLoginForLinux"
   type_handler_version       = "1.0"
   auto_upgrade_minor_version = true
+}
+
+resource "random_password" "admin" {
+  length  = 16   # Longitud total de la contraseña
+  special = true # Incluir caracteres especiales (!@#$...)
+  upper   = true # Incluir mayúsculas
+  lower   = true # Incluir minúsculas
 }
