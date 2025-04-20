@@ -134,6 +134,7 @@ resource "azurerm_virtual_machine_extension" "aad_login" {
 }
 #------------------------------------------
 
+/*
 #------------------------------------------
 # Habilitar Network Security Group
 # Azure aplica una regla implícita de “Deny All” al final de las reglas de NSG,
@@ -167,6 +168,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
 #------------------------------------------
+*/
 
 resource "random_password" "admin" {
   length  = 16   # Longitud total de la contraseña
