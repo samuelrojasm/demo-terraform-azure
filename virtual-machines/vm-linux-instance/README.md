@@ -89,7 +89,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 ---
 
 ## 🚀 Resultado (Outcome)
-### Terraform apply
+### Terraform apply (outputs)
 <p align="center">
 <img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="90%">
 </p>
@@ -114,5 +114,14 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 <p align="center">
 <img src="assets/imagenes/vm_network_settings.png" alt="Network settings" width="80%">
 </p>
+
+### Acceso a la VM Linux
+- Usar el comando:
+    ```bash
+        
+    ```
+    <p align="center">
+    <img src="assets/imagenes/.png" alt="Network settings" width="80%">
+    </p>
 
 ---
