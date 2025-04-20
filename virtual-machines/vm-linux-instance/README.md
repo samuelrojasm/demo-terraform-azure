@@ -123,7 +123,10 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 ### Acceso a la VM Linux
 - Usar el comando:
     ```bash
-        
+    az ssh vm \
+    --name vm-entraid-demo-eastus-001 \
+    --resource-group rg-vnet-entraid-demo-001 \
+    --auth-type AAD
     ```
     <p align="center">
     <img src="assets/imagenes/.png" alt="Login VM Linux" width="80%">
