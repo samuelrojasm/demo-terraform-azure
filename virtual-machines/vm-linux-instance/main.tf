@@ -103,7 +103,6 @@ resource "azurerm_linux_virtual_machine" "vm" {
     name                 = local.os_disk_name
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
-
   }
 
   tags = {
@@ -160,7 +159,6 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
 #------------------------------------------
-
 
 resource "random_password" "admin" {
   length  = 16   # Longitud total de la contraseña
