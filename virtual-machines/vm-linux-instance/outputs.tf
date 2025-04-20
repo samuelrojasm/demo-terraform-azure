@@ -18,10 +18,10 @@ output "admin_password" {
 
 output "Red" {
   value = {
-    vnet_name   = try(azurerm_virtual_network.vnet.name, null)
-    subnet_name = try(azurerm_subnet.subnet.name, null)
-    private_ip  = azurerm_network_interface.nic.private_ip_address
-    public_ip   = azurerm_public_ip.public_ip.ip_address
+    vnet_name      = try(azurerm_virtual_network.vnet.name, null)
+    subnet_name    = try(azurerm_subnet.subnet.name, null)
+    private_ip     = azurerm_network_interface.nic.private_ip_address
+    public_ip      = azurerm_public_ip.public_ip.ip_address
     public_ip_name = azurerm_public_ip.public_ip.name
   }
 }
@@ -41,6 +41,16 @@ output "Managed_Identity" {
   }
 }
 
+output "Extensiones" {
+  value = {
+    aad_ssh_extension_name      = try(azurerm_virtual_machine_extension.aad_login.name, null)
+    aad_ssh_extension_type      = try(azurerm_virtual_machine_extension.aad_login.type, null)
+    aad_ssh_extension_publisher = try(azurerm_virtual_machine_extension.aad_login.publisher, null)
+  }
+}
+
+/*
+
 output "NSG" {
   value = {
     nsg_name = azurerm_network_security_group.nsg.name
@@ -59,10 +69,4 @@ output "nsg_rules" {
   }
 }
 
-output "Extensiones" {
-  value = {
-    aad_ssh_extension_name      = try(azurerm_virtual_machine_extension.aad_login.name, null)
-    aad_ssh_extension_type      = try(azurerm_virtual_machine_extension.aad_login.type, null)
-    aad_ssh_extension_publisher = try(azurerm_virtual_machine_extension.aad_login.publisher, null)
-  }
-}
+*/
