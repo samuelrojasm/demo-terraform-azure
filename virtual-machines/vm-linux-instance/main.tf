@@ -71,7 +71,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   # Usa una llave Dummy que no se usará
   admin_ssh_key {
     username   = "azureuser"
-    public_key = file("${path.module}/.ssh/dummy.pub")
+    public_key = file("${path.module}/.ssh/dummy_key.pub")
   }
 
   #------------------------------------------
