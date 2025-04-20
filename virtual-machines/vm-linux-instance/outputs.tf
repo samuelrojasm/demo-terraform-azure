@@ -36,7 +36,6 @@ output "Disco" {
 output "Managed_Identity" {
   value = {
     identity_type = azurerm_linux_virtual_machine.vm.identity[0].type # Managed Identity (System Assigned)
-    principal_id  = azurerm_linux_virtual_machine.vm.identity[0].principal_id
   }
 }
 
@@ -63,6 +62,5 @@ output "Extensiones" {
     aad_ssh_extension_name      = try(azurerm_virtual_machine_extension.aad_login.name, null)
     aad_ssh_extension_type      = try(azurerm_virtual_machine_extension.aad_login.type, null)
     aad_ssh_extension_publisher = try(azurerm_virtual_machine_extension.aad_login.publisher, null)
-
   }
 }
