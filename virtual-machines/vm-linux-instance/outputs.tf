@@ -22,6 +22,7 @@ output "Red" {
     subnet_name = try(azurerm_subnet.subnet.name, null)
     private_ip  = azurerm_network_interface.nic.private_ip_address
     public_ip   = azurerm_public_ip.public_ip.ip_address
+    public_ip_name = azurerm_public_ip.public_ip.name
   }
 }
 
