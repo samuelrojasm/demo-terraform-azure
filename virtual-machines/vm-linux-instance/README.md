@@ -90,12 +90,9 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 
 ## 🚀 Resultado (Outcome)
 ### Terraform apply
-
-<br>
 <p align="center">
-<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="70%">
+<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="90%">
 </p>
-<br>
 
 ### Resource map (Private Subnets)
 ![Private Subnet](assets/imagenes/private_subnets.png)
