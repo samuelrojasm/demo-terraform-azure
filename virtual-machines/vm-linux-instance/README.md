@@ -121,11 +121,22 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 </p>
 
 ### Acceso a la VM Linux
+- Instalar el plugin Azure CLI SSH
+    ```bash
+    az extension add --upgrade -n ssh
+    ```
+    <p align="center">
+    <img src="assets/imagenes/plugin_azure_cli_ssh.png" alt="Plugin Azure CLI SSH" width="80%">
+    </p>
 - Login de usuario con permiso de acceder por **az ssh**
     ```bash
     az login --use-device-code
     ```
-- Usar el comando para acceder:
+- Verificar cuenta actual
+    ```bash
+    az account show
+    ```
+- Usar el comando para acceder a la VM:
     ```bash
     az ssh vm \
     --name vm-entraid-demo-eastus-001 \
