@@ -8,6 +8,7 @@ locals {
   nic_name            = "nic-${var.purpose}-${var.location}-001"
   vm_name             = "vm-${var.purpose}-${var.location}-001"
   os_disk_name        = "osdisk-${var.purpose}-${var.location}-001"
+  nsg_name            = "nsg-${var.purpose}-${var.location}-001"
 }
 
 # Grupo de recursos
@@ -59,13 +60,19 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                  = local.vm_name
-  admin_username        = "azureuser"                  # Requerido aunque no se use para login
-  admin_password        = random_password.admin.result # Requerido aunque no se use para login
+  name           = local.vm_name
+  admin_username = var.admin_username # Requerido aunque no se use para login
+  # admin_password        = random_password.admin.result # Requerido aunque no se use para login
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.nic.id]
   size                  = "Standard_B1ls"
+
+  # Usa una llave Dummy que no se usará
+  admin_ssh_key {
+    username   = "azureuser"
+    public_key = file("${path.module}/.ssh/dummy.pub")
+  }
 
   #------------------------------------------
   # Requisito obligatorio para Entra ID login,
@@ -82,6 +89,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   # usar únicamente Entra ID para el acceso
   # (es decir, az ssh vm con credenciales de AAD)
   disable_password_authentication = true
+  admin_password                  = null
   #------------------------------------------
 
   source_image_reference {
@@ -117,6 +125,42 @@ resource "azurerm_virtual_machine_extension" "aad_login" {
   type_handler_version       = "1.0"
   auto_upgrade_minor_version = true
 }
+#------------------------------------------
+
+#------------------------------------------
+# Habilitar Network Security Group
+# Azure aplica una regla implícita de “Deny All” al final de las reglas de NSG,
+# por lo que todo lo que no esté explícitamente permitido será denegado automáticamente.
+#------------------------------------------
+resource "azurerm_network_security_group" "nsg" {
+  name                = local.nsg_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+}
+
+# Regla: Denegar SSH (puerto 22)
+resource "azurerm_network_security_rule" "deny_ssh" {
+  name                        = "Deny-SSH"
+  priority                    = 100
+  direction                   = "Inbound"
+  access                      = "Deny"
+  protocol                    = "Tcp"
+  source_port_range           = "*"
+  destination_port_range      = "22"
+  source_address_prefix       = "*"
+  destination_address_prefix  = "*"
+  resource_group_name         = azurerm_resource_group.rg.name
+  network_security_group_name = azurerm_network_security_group.nsg.name
+  description                 = "Bloquea el acceso SSH por puerto 22"
+}
+
+# Asociar este NSG a la interfaz de red de la VM
+resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
+  network_interface_id      = azurerm_network_interface.nic.id
+  network_security_group_id = azurerm_network_security_group.nsg.id
+}
+#------------------------------------------
+
 
 resource "random_password" "admin" {
   length  = 16   # Longitud total de la contraseña

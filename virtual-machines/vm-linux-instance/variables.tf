@@ -24,3 +24,14 @@ variable "subnet_prefix" {
   description = "Prefijo de la subred"
   type        = list(string)
 }
+
+variable "admin_ssh_key" {
+  description = "Clave pública SSH del administrador"
+  type        = string
+  sensitive   = true
+}
+
+variable "admin_username" {
+  description = "Nombre del usuario administrador"
+  type        = string
+}
