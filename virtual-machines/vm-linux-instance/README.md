@@ -94,6 +94,11 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 <img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="70%">
 </p>
 
+### Terraform state list
+<p align="center">
+<img src="assets/imagenes/terraform_state_list.png" alt="Terraform state list" width="70%">
+</p>
+
 ### Recursos generados
 #### Role Assignments
 <p align="center">
