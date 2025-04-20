@@ -58,7 +58,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
         ```
     <br>
     <p align="center">
-    <img src="assets/imagenes/roleAssignments.png" alt="Assign Roles" width="80%">
+    <img src="assets/imagenes/roleAssignments.png" alt="Assign Roles" width="70%">
     </p>
     <br>
 
