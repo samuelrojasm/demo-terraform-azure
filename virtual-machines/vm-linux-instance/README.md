@@ -94,7 +94,25 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 <img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="90%">
 </p>
 
-### Resource map (Private Subnets)
-![Private Subnet](assets/imagenes/private_subnets.png)
+### Recursos generados
+#### Role Assignments
+<p align="center">
+<img src="assets/imagenes/vm_role_assignments.png" alt="Role Assignments" width="80%">
+</p>
+
+#### System Assigned Managed Identity
+<p align="center">
+<img src="assets/imagenes/vm_system_assigned managed_identity.png" alt="System Assigned Managed Identity" width="80%">
+</p>
+
+#### Extensions
+<p align="center">
+<img src="assets/imagenes/vm_extensions.png" alt="Extensions" width="80%">
+</p>
+
+#### Network settings
+<p align="center">
+<img src="assets/imagenes/vm_network_settings.png" alt="Network settings" width="80%">
+</p>
 
 ---
