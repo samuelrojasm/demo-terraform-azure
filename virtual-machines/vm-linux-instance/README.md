@@ -138,7 +138,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
     ```
 - Usar el comando para acceder a la VM:
     ```bash
-    az ssh vm \
+    az vm ssh \
     --name vm-entraid-demo-eastus-001 \
     --resource-group rg-vnet-entraid-demo-001 \
     --auth-type AAD
