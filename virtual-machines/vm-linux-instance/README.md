@@ -124,6 +124,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 - Instalar el plugin Azure CLI SSH
     ```bash
     az extension add --upgrade -n ssh
+    az extension show --name ssh
     ```
     <p align="center">
     <img src="assets/imagenes/plugin_azure_cli_ssh.png" alt="Plugin Azure CLI SSH" width="80%">
@@ -138,10 +139,9 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
     ```
 - Usar el comando para acceder a la VM:
     ```bash
-    az vm ssh \
+    az ssh vm \
     --name vm-entraid-demo-eastus-001 \
-    --resource-group rg-vnet-entraid-demo-001 \
-    --auth-type AAD
+    --resource-group rg-vnet-entraid-demo-001
     ```
     <p align="center">
     <img src="assets/imagenes/.png" alt="Login VM Linux" width="80%">
