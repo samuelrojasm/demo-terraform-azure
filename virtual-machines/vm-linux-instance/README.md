@@ -121,7 +121,11 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 </p>
 
 ### Acceso a la VM Linux
-- Usar el comando:
+- Login de usuario con permiso de acceder por **az ssh**
+    ```bash
+    az login --use-device-code
+    ```
+- Usar el comando para acceder:
     ```bash
     az ssh vm \
     --name vm-entraid-demo-eastus-001 \
