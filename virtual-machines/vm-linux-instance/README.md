@@ -58,7 +58,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
         ```
     <br>
     <p align="center">
-    <img src="assets/imagenes/roleAssignments.png" alt="Assign Roles" width="60%">
+    <img src="assets/imagenes/roleAssignments.png" alt="Assign Roles" width="80%">
     </p>
     <br>
 
@@ -70,7 +70,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 
     <br>
     <p align="center">
-    <img src="assets/imagenes/create_custom_role.png" alt="Create a custom role" width="60%">
+    <img src="assets/imagenes/create_custom_role.png" alt="Create a custom role" width="50%">
     </p>
     <br>
 
@@ -90,7 +90,13 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 
 ## 🚀 Resultado (Outcome)
 ### Terraform apply
-![Private Subnet](assets/imagenes/terraform_apply.png)
+
+<br>
+<p align="center">
+<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="70%">
+</p>
+<br>
+
 ### Resource map (Private Subnets)
 ![Private Subnet](assets/imagenes/private_subnets.png)
 
