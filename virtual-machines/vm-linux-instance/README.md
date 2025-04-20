@@ -91,7 +91,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 ## 🚀 Resultado (Outcome)
 ### Terraform apply (outputs)
 <p align="center">
-<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="90%">
+<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="70%">
 </p>
 
 ### Recursos generados
@@ -121,7 +121,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
         
     ```
     <p align="center">
-    <img src="assets/imagenes/.png" alt="Network settings" width="80%">
+    <img src="assets/imagenes/.png" alt="Login VM Linux" width="80%">
     </p>
 
 ---
