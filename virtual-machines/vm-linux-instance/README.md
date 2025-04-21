@@ -91,12 +91,12 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 ## 🚀 Resultado (Outcome)
 ### Terraform apply (outputs)
 <p align="center">
-<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="70%">
+<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="60%">
 </p>
 
 ### Terraform state list
 <p align="center">
-<img src="assets/imagenes/terraform_state_list.png" alt="Terraform state list" width="70%">
+<img src="assets/imagenes/terraform_state_list.png" alt="Terraform state list" width="60%">
 </p>
 
 ### Recursos generados
@@ -144,7 +144,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
     --resource-group rg-vnet-entraid-demo-001
     ```
     <p align="center">
-    <img src="assets/imagenes/login_vm_linux.png" alt="Login VM Linux" width="80%">
+    <img src="assets/imagenes/login_vm_linux.png" alt="Login VM Linux" width="70%">
     </p>
 
 ---
