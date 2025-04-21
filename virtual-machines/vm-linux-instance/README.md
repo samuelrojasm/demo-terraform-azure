@@ -137,14 +137,14 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
     ```bash
     az account show
     ```
-- Usar el comando para acceder a la VM:
+- Usar el comando para acceder a la VM (sin contraseña o llave privada)
     ```bash
     az ssh vm \
     --name vm-entraid-demo-eastus-001 \
     --resource-group rg-vnet-entraid-demo-001
     ```
     <p align="center">
-    <img src="assets/imagenes/.png" alt="Login VM Linux" width="80%">
+    <img src="assets/imagenes/login_vm_linux.png" alt="Login VM Linux" width="80%">
     </p>
 
 ---
