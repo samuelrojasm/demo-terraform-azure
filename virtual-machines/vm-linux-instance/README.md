@@ -86,7 +86,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
         ```
     - Hacer click en "Review + assign"
 
-6. Crear par de llaves (privada y pública) dummy 
+6. Crear par de llaves (privada y pública) dummy
     - Se requiere la llave púbica dummy para poder crear la VM
     - Para la creación del par de llaves se ejecuta:
         ```bash
@@ -98,7 +98,7 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
         cd .ssh
         cp ~/.ssh/dummy_key.pub .
         ```
-        
+
 ---
 
 ## 🚀 Resultado (Outcome)
@@ -126,11 +126,6 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
 #### Extensions
 <p align="center">
 <img src="assets/imagenes/vm_extensions.png" alt="Extensions" width="80%">
-</p>
-
-#### Network settings
-<p align="center">
-<img src="assets/imagenes/vm_network_settings.png" alt="Network settings" width="80%">
 </p>
 
 ### Acceso a la VM Linux
