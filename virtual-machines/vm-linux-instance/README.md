@@ -86,6 +86,19 @@ Previo a la ejecución es necesario tener listo los siguientes recursos:
         ```
     - Hacer click en "Review + assign"
 
+6. Crear par de llaves (privada y pública) dummy 
+    - Se requiere la llave púbica dummy para poder crear la VM
+    - Para la creación del par de llaves se ejecuta:
+        ```bash
+        ssh-keygen -t rsa -b 4096 -f ~/.ssh/dummy_key -N ""
+        ```
+    - Crear directorio en el módulo principal de Terraform y copiar llave pública
+        ```bash
+        mkdir .ssh
+        cd .ssh
+        cp ~/.ssh/dummy_key.pub .
+        ```
+        
 ---
 
 ## 🚀 Resultado (Outcome)
