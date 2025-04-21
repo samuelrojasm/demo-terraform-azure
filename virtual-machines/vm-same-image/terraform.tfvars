@@ -8,6 +8,7 @@ subnet_prefix       = ["10.0.1.0/24"]
 admin_username      = "azureuser"
 cantidad_instancias = 2
 size_vm             = "Standard_B1ls"
+
 vm_image = {
   publisher = "Canonical"
   offer     = "0001-com-ubuntu-server-jammy"
@@ -15,3 +16,7 @@ vm_image = {
   version   = "latest"
 }
 
+vm_os_disk = {
+  caching              = "ReadWrite"
+  storage_account_type = "Standard_LRS"
+}
