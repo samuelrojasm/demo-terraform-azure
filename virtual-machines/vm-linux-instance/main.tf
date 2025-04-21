@@ -170,9 +170,13 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
 #------------------------------------------
 */
 
+/*
+
 resource "random_password" "admin" {
   length  = 16   # Longitud total de la contraseña
   special = true # Incluir caracteres especiales (!@#$...)
   upper   = true # Incluir mayúsculas
   lower   = true # Incluir minúsculas
 }
+
+*/
