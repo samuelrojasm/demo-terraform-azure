@@ -164,7 +164,6 @@
             az ssh vm \
                 --name <nombre-vm> \
                 --resource-group <grupo-recursos> \
-                --auth-type AAD
             ```
         - Windows: Acceso vía RDP
             ```sh
