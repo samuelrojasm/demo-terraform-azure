@@ -29,3 +29,31 @@ variable "admin_username" {
   description = "Usuario administrador"
   type        = string
 }
+
+variable "cantidad_instancias" {
+  description = "Cantidad de VM que se crean"
+  type        = number
+}
+
+variable "size_vm" {
+  description = "Tamaño de la VM"
+  type        = string
+}
+
+variable "vm_image" {
+  description = "Referencia de la imagen a usar para la VM"
+  type = object({
+    publisher = string
+    offer     = string
+    sku       = string
+    version   = string
+  })
+}
+
+variable "vm_os_disk" {
+  description = "Diso de SO para la VM"
+  type = object({
+    caching              = string
+    storage_account_type = string
+  })
+}

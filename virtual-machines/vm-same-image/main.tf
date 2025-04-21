@@ -59,8 +59,10 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_password                  = null
   location                        = azurerm_resource_group.rg.location
   resource_group_name             = azurerm_resource_group.rg.name
-  network_interface_ids           = [azurerm_network_interface.nic[count.index].id]
-  size                            = var.size_vm
+  network_interface_ids = [
+    azurerm_network_interface.nic[count.index].id
+  ]
+  size = var.size_vm
 
   # Llave pública 
   admin_ssh_key {
@@ -69,17 +71,16 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
-    version   = "latest"
+    publisher = var.vm_image.publisher
+    offer     = var.vm_image.offer
+    sku       = var.vm_image.sku
+    version   = var.vm_image.version
   }
 
   os_disk {
     name                 = "osdisk-${local.prefix}-${count.index + 1}"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
-
   }
 
   tags = {
