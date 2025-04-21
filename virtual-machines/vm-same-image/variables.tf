@@ -24,3 +24,8 @@ variable "subnet_prefix" {
   description = "Prefijo de la subred"
   type        = list(string)
 }
+
+variable "admin_username" {
+  description = "Usuario administrador"
+  type        = string
+}
