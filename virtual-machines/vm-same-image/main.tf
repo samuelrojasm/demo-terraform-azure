@@ -2,22 +2,19 @@
 
 # Generar nombres dinámicos
 locals {
-  resource_group_name = "rg-${var.service}-${var.purpose}-001"
-  vnet_name           = "vnet-${var.purpose}-${var.location}-001"
-  subnet_name         = "snet-${var.purpose}-${var.location}-001"
-  nic_name            = "nic-${var.purpose}-${var.location}-001"
-  public_ip_name      = "pip-${var.purpose}-${var.location}-001"
+  prefix       = "${var.service}-${var.purpose}"
+  os_disk_name = "osdisk-${var.purpose}-${var.location}"
 }
 
 # Grupo de recursos
 resource "azurerm_resource_group" "rg" {
-  name     = local.resource_group_name
+  name     = "rg-${local.prefix}-001"
   location = var.location
 }
 
 # Virtual Network
 resource "azurerm_virtual_network" "vnet" {
-  name                = local.vnet_name
+  name                = "vnet-${local.prefix}-001"
   address_space       = var.vnet_address_space
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -25,14 +22,15 @@ resource "azurerm_virtual_network" "vnet" {
 
 # Subred
 resource "azurerm_subnet" "subnet" {
-  name                 = local.subnet_name
+  name                 = "snet-${local.prefix}-001"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = var.subnet_prefix
 }
 
 resource "azurerm_public_ip" "public_ip" {
-  name                = local.public_ip_name
+  count               = var.cantidad_instancias
+  name                = "pip-${local.prefix}-${count.index + 1}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
@@ -40,7 +38,8 @@ resource "azurerm_public_ip" "public_ip" {
 }
 
 resource "azurerm_network_interface" "nic" {
-  name                = local.nic_name
+  count               = var.cantidad_instancias
+  name                = "nic-${local.prefix}-${count.index + 1}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -48,26 +47,26 @@ resource "azurerm_network_interface" "nic" {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.public_ip.id
+    public_ip_address_id          = azurerm_public_ip.public_ip[count.index].id
   }
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                  = "vm-entraid-demo"
-  admin_username        = "azureuser"
-  admin_password        = random_password.password.result
-  location              = azurerm_resource_group.rg.location
-  resource_group_name   = azurerm_resource_group.rg.name
-  network_interface_ids = [azurerm_network_interface.nic.id]
-  size                  = "Standard_B1ls"
-
-  # Requisito obligatorio para login con Entra ID
-  identity {
-    type = "SystemAssigned"
-  }
-
-  # NO usamos claves SSH
+  count                           = var.cantidad_instancias                 # Crea múltiples VM
+  name                            = "vm-${local.prefix}-${count.index + 1}" # Nombre dinámico: VM 1, 2, 3...
+  admin_username                  = var.admin_username
   disable_password_authentication = true
+  admin_password                  = null
+  location                        = azurerm_resource_group.rg.location
+  resource_group_name             = azurerm_resource_group.rg.name
+  network_interface_ids           = [azurerm_network_interface.nic[count.index].id]
+  size                            = var.size_vm
+
+  # Llave pública 
+  admin_ssh_key {
+    username   = var.admin_username
+    public_key = file("${path.module}/.ssh/dummy_key.pub")
+  }
 
   source_image_reference {
     publisher = "Canonical"
@@ -77,7 +76,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
 
   os_disk {
-    name                 = "vm-entraid-osdisk"
+    name                 = "osdisk-${local.prefix}-${count.index + 1}"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
 
@@ -86,23 +85,4 @@ resource "azurerm_linux_virtual_machine" "vm" {
   tags = {
     env = var.purpose
   }
-}
-
-# Habilitar la extensión de login Entra ID
-resource "azurerm_virtual_machine_extension" "aad_login" {
-  name                       = "AADSSHLogin"
-  virtual_machine_id         = azurerm_linux_virtual_machine.vm.id
-  publisher                  = "Microsoft.Azure.ActiveDirectory"
-  type                       = "AADSSHLoginForLinux"
-  type_handler_version       = "1.0"
-  auto_upgrade_minor_version = true
-}
-
-resource "random_password" "password" {
-  length      = 30
-  min_lower   = 1
-  min_upper   = 1
-  min_numeric = 1
-  min_special = 1
-  special     = true
 }
