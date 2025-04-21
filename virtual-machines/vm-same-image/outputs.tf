@@ -1,6 +1,12 @@
 # Datos presentados al final de Terraform apply
 
+output "vm_count" {
+  description = "Cantidad de VMs creadas"
+  value       = length(azurerm_linux_virtual_machine.vm)
+}
+
 output "resource_group_name" {
+  description = "Nombre de Resource Group"
   value = azurerm_resource_group.rg.name
 }
 
