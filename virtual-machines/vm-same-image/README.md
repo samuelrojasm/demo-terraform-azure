@@ -1,11 +1,24 @@
-## 🛠️  Demo: Azure Virtual Machine - Varias VM (misma imagen)
+## 🛠️  Demo: Azure Virtual Machine Linux con SSH (múltiples VM de la misma imagen)
 
 [![Azure](https://badgen.net/badge/icon/azure?icon=azure&label)](https://azure.microsoft.com)
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-623CE4?logo=terraform&logoColor=white)](#)
 [![HCL](https://img.shields.io/badge/Language-HCL-blueviolet)](#)
 
 ## 🎯 Objetivo (Target)
-- Creación de múltiples VM de la misma imagen
+- Este proyecto despliega múltiples máquinas virtuales Linux en Azure usando Terraform.
+- Autenticación por **llave pública SSH** (sin contraseña).
+- Recursos que se crean:
+    - Grupo de recursos
+    - Red virtual y subred
+    - IP pública
+    - NIC
+    - Disco
+    - Múltiples máquinas virtuales Linux (Ubuntu 22.04)
+- Cada VM debe tener su propia:
+    - NIC
+    - IP pública
+    - Disco OS
+    - Nombre único
 
 ---
 
