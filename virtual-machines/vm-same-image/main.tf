@@ -12,6 +12,8 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
 }
 
+/*
+
 # Obtener el ID de un grupo existente
 data "azuread_group" "vm_user_group" {
   display_name = "grp-vm-user-login"
@@ -23,6 +25,8 @@ resource "azurerm_role_assignment" "vm_user_login" {
   role_definition_name = "Virtual Machine User Login"
   principal_id         = data.azuread_group.vm_user_group.object_id
 }
+
+*/
 
 # Virtual Network
 resource "azurerm_virtual_network" "vnet" {
@@ -77,9 +81,9 @@ resource "azurerm_linux_virtual_machine" "vm" {
   size = var.size_vm
 
   # Activar System Assigned Managed Identity
-  identity {
-    type = "SystemAssigned"
-  }
+  # identity {
+  #  type = "SystemAssigned"
+  #}
 
   # Llave pública 
   admin_ssh_key {
@@ -105,6 +109,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
 }
 
+/* 
+
 #------------------------------------------
 # Habilitar la extensión de login Entra ID
 #------------------------------------------
@@ -121,3 +127,5 @@ resource "azurerm_virtual_machine_extension" "aad_login" {
   auto_upgrade_minor_version = true
 }
 #------------------------------------------
+
+*/
