@@ -12,6 +12,18 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
 }
 
+# Obtener el ID de un grupo existente
+data "azuread_group" "vm_user_group" {
+  display_name = "grp-vm-user-login"
+}
+
+# Asignar el Rol "Virtual Machine User Login" al Grupo (a nivel Resource Group)
+resource "azurerm_role_assignment" "vm_user_login" {
+  scope                = azurerm_resource_group.rg.id
+  role_definition_name = "Virtual Machine User Login"
+  principal_id         = data.azuread_group.vm_user_group.object_id
+}
+
 # Virtual Network
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet-${local.prefix}-001"
@@ -64,6 +76,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
   ]
   size = var.size_vm
 
+  # Activar System Assigned Managed Identity
+  identity {
+    type = "SystemAssigned"
+  }
+
   # Llave pública 
   admin_ssh_key {
     username   = var.admin_username
@@ -79,11 +96,28 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   os_disk {
     name                 = "osdisk-${local.prefix}-${count.index + 1}"
-    caching              = "ReadWrite"
-    storage_account_type = "Standard_LRS"
+    caching              = var.vm_os_disk.caching
+    storage_account_type = var.vm_os_disk.storage_account_type
   }
 
   tags = {
     env = var.purpose
   }
 }
+
+#------------------------------------------
+# Habilitar la extensión de login Entra ID
+#------------------------------------------
+# La VM debe tener instalada la extensión AADSSHLoginForLinux, 
+# la cual permite validar y aceptar las credenciales de 
+# Microsoft Entra ID para conexión SSH
+resource "azurerm_virtual_machine_extension" "aad_login" {
+  count                      = var.cantidad_instancias
+  name                       = "AADSSHLogin"
+  virtual_machine_id         = azurerm_linux_virtual_machine.vm[count.index].id
+  publisher                  = "Microsoft.Azure.ActiveDirectory"
+  type                       = "AADSSHLoginForLinux"
+  type_handler_version       = "1.0"
+  auto_upgrade_minor_version = true
+}
+#------------------------------------------
