@@ -13,10 +13,10 @@ output "resource_group_name" {
 output "vm_info" {
   description = "Nombre de las VMs creadas"
   value = {
-    nombre                = azurerm_linux_virtual_machine.vm[*].name
-    public_ip             = azurerm_public_ip.public_ip[*].ip_address
-    public_ip_name        = azurerm_public_ip.public_ip[*].name
-    managed_identity_type = azurerm_linux_virtual_machine.vm[*].identity[0].type # Managed Identity (System Assigned)
+    nombre         = azurerm_linux_virtual_machine.vm[*].name
+    public_ip      = azurerm_public_ip.public_ip[*].ip_address
+    public_ip_name = azurerm_public_ip.public_ip[*].name
+    # managed_identity_type = azurerm_linux_virtual_machine.vm[*].identity[0].type # Managed Identity (System Assigned)
   }
 }
 
