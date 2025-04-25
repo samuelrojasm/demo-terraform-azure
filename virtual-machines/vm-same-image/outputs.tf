@@ -5,9 +5,18 @@ output "vm_count" {
   value       = length(azurerm_linux_virtual_machine.vm)
 }
 
+output "vm_info" {
+  description = "Nombre de las VMs creadas"
+  value = {
+    nombre         = azurerm_linux_virtual_machine.vm[*].name
+    public_ip      = azurerm_public_ip.public_ip[*].ip_address
+    public_ip_name = azurerm_public_ip.public_ip[*].name
+  }
+}
+
 output "resource_group_name" {
   description = "Nombre de Resource Group"
-  value = azurerm_resource_group.rg.name
+  value       = azurerm_resource_group.rg.name
 }
 
 output "Red" {
