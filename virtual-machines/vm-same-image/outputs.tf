@@ -29,8 +29,8 @@ output "Red" {
 
 output "Extensiones" {
   value = {
-    aad_ssh_extension_name      = try(azurerm_virtual_machine_extension.aad_login.name, null)
-    aad_ssh_extension_type      = try(azurerm_virtual_machine_extension.aad_login.type, null)
-    aad_ssh_extension_publisher = try(azurerm_virtual_machine_extension.aad_login.publisher, null)
+    aad_ssh_extension_name      = try(azurerm_virtual_machine_extension.aad_login[*].name, null)
+    aad_ssh_extension_type      = try(azurerm_virtual_machine_extension.aad_login[*].type, null)
+    aad_ssh_extension_publisher = try(azurerm_virtual_machine_extension.aad_login[*].publisher, null)
   }
 }
