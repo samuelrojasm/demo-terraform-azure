@@ -43,28 +43,27 @@
 ## 🚀 Resultado (Outcome)
 ### Terraform apply (outputs)
 <p align="center">
-<img src="assets/imagenes/terraform_apply_vm_linux.png" alt="Terraform apply" width="60%">
-</p>
-
-### Terraform state list
-<p align="center">
-<img src="assets/imagenes/terraform_state_list.png" alt="Terraform state list" width="60%">
+<img src="assets/imagenes/terraform_apply_same_image.png" alt="Terraform apply" width="60%">
 </p>
 
 ### Acceso a la VM Linux
-- Usar el comando para acceder a la VM (sin contraseña o llave privada)
+- Acceso a VM con llave privada
     ```bash
-    az ssh vm \
-    --name vm-entraid-demo-eastus-001 \
-    --resource-group rg-vnet-entraid-demo-001
+    ssh -i ~/.ssh/dummy_key azureuser@52.226.129.205
     ```
     <p align="center">
-    <img src="assets/imagenes/login_vm_linux.png" alt="Login VM Linux" width="70%">
+    <img src="assets/imagenes/autenticacion_clasica_clave_SSH.png" alt="Login VM Linux" width="70%">
     </p>
 
-
-![Private Subnet](assets/imagenes/terraform_apply.png)
-### Resource map (Private Subnets)
-![Private Subnet](assets/imagenes/private_subnets.png)
+- Acceso a VM con Entra ID + RBAC
+    ```bash
+    az ssh vm \
+    --name vm-same-image-demo-1 \
+    --resource-group rg-same-image-demo-001 \
+    --private-key ~/.ssh/dummy_key
+    ```
+    <p align="center">
+    <img src="assets/imagenes/az_ssh_vm.png" alt="Login VM Linux" width="70%">
+    </p>
 
 ---
