@@ -47,23 +47,20 @@
 </p>
 
 ### Acceso a la VM Linux
-- Acceso a VM con llave privada
+- Acceso a VM 01 con llave privada
     ```bash
-    ssh -i ~/.ssh/dummy_key azureuser@52.226.129.205
+    ssh -i ~/.ssh/dummy_key azureuser@13.82.20.171
     ```
     <p align="center">
-    <img src="assets/imagenes/autenticacion_clasica_clave_SSH.png" alt="Login VM Linux" width="70%">
+    <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_01.png" alt="Login VM Linux 01" width="70%">
     </p>
 
-- Acceso a VM con Entra ID + RBAC
+- Acceso a VM 02 con llave privada
     ```bash
-    az ssh vm \
-    --name vm-same-image-demo-1 \
-    --resource-group rg-same-image-demo-001 \
-    --private-key ~/.ssh/dummy_key
+    ssh -i ~/.ssh/dummy_key azureuser@52.168.24.136
     ```
     <p align="center">
-    <img src="assets/imagenes/az_ssh_vm.png" alt="Login VM Linux" width="70%">
+    <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_02.png" alt="Login VM Linux 02" width="70%">
     </p>
-
+    
 ---
