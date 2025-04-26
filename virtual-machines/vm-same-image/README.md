@@ -1,4 +1,4 @@
-## 🛠️  Demo: Azure Virtual Machine Linux con SSH (múltiples VM de la misma imagen)
+## 🛠️  Demo: Azure Virtual Machine Linux acceso con SSH clásico (múltiples VM de la misma imagen)
 
 [![Azure](https://badgen.net/badge/icon/azure?icon=azure&label)](https://azure.microsoft.com)
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-623CE4?logo=terraform&logoColor=white)](#)
@@ -37,7 +37,6 @@
         cd .ssh
         cp ~/.ssh/dummy_key.pub .
         ```
-
 ---
 
 ## 🚀 Resultado (Outcome)

@@ -1,4 +1,7 @@
+##-------------------------------------------------
+# vm-same-image
 # Asignación de valores a las varibales
+##-------------------------------------------------
 
 location            = "eastus"
 service             = "same-image"

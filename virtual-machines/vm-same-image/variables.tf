@@ -1,4 +1,7 @@
+##---------------------------------------------------------------------------
+# vm-same-image
 # Difinción de variables para que el código sea flexible
+##---------------------------------------------------------------------------
 
 variable "location" {
   description = "Ubicación de los recursos"

@@ -1,5 +1,8 @@
+##-------------------------------------------------
+# vm-same-image
 # Configurar Azure provider
 # Iniciar sesión con las credenciales definidas
+##-------------------------------------------------
 
 terraform {
   required_version = ">= 1.11.0"
@@ -11,11 +14,6 @@ terraform {
       version = "~> 4.0"
     }
 
-    azuread = {
-      source  = "hashicorp/azuread"
-      version = "~> 3.0"
-    }
-
     random = {
       source  = "hashicorp/random"
       version = "~>3.0"
@@ -25,7 +23,4 @@ terraform {
 
 provider "azurerm" {
   features {}
-}
-
-provider "azuread" {
 }
