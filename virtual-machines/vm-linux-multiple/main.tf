@@ -6,7 +6,7 @@
 
 # Generar nombres dinámicos
 locals {
-  prefix       = "${var.service}-${var.purpose}"
+prefix       = "${var.service}-${var.purpose}"
   os_disk_name = "osdisk-${var.purpose}-${var.location}"
 }
 
