@@ -54,7 +54,12 @@
 ## 🚀 Resultado (Outcome)
 ### Terraform apply (outputs)
 <p align="center">
-<img src="assets/imagenes/terraform_apply_same_image.png" alt="Terraform apply" width="60%">
+<img src="assets/imagenes/terraform_apply_linux_multiple.png" alt="Terraform apply" width="60%">
+</p>
+
+### Terraform state list
+<p align="center">
+<img src="assets/imagenes/ terraform_state_list.png" alt="Terraform State" width="60%">
 </p>
 
 ### Acceso a las VMs Linux
@@ -78,7 +83,7 @@
     --resource-group rg-multiples-demo-001
     ```
     <p align="center">
-    <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_01.png" alt="Login VM Linux 01" width="70%">
+    <img src="assets/imagenes/autenticacion_az_ssh_vm_01.png" alt="Login VM Linux 01" width="70%">
     </p>
 - Acceso a VM 02 con Entra ID + RBAC (sin contraseña o llave privada)
     ```bash
@@ -86,8 +91,4 @@
     --name vm-multiples-demo-2 \
     --resource-group rg-multiples-demo-001
     ```
-    <p align="center">
-    <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_02.png" alt="Login VM Linux 02" width="70%">
-    </p>
-
 ---
