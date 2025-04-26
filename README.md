@@ -15,7 +15,8 @@
 - [Virtual Network con una subnet](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/virtual-networks/vnet-basic)
 ### Ejemplos Virtual Machine (VM)
 - [VM Linux (Entra ID + RBAC)](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/virtual-machines/vm-linux-instance)
-- [Crear múltiples VM Linux (misma imagen)](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/virtual-machines/vm-same-image)
+- [Crear múltiples VM Linux (ssh clásico)](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/virtual-machines/vm-same-image)
+- [Crear múltiples VM Linux (Entra ID + RBAC)](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/virtual-machines/vm-linux-multiple)
 
 ## 🚀 **Requisitos**
 - [Terraform](https://developer.hashicorp.com/terraform/downloads)
