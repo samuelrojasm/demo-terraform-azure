@@ -37,9 +37,17 @@
         cd .ssh
         cp ~/.ssh/dummy_key.pub .
         ```
-2. Crear grupo: 
-3. Crear usuario: 
-4. Asignar usuario al grupo
+2. Crear grupo de Entra ID (por ejemplo: grp-vm-user-login)
+3. Crear usuario de Entra ID (por ejemplo: vm-user-login) 
+4. Asignar usuario (vm-user-login) al grupo (grp-vm-user-login)
+5. Crear Rol personalizado para el usuario azure que ejecuta los comandos de Terraform
+    - Permisos requeridos
+        ```bash
+        Microsoft.Authorization/roleAssignments/write
+        Microsoft.Authorization/roleAssignments/delete
+        Microsoft.Authorization/roleAssignments/read
+        ```
+6. Asignar este rol personalizado al usuario azure que ejecuta los comandos de Terraform
 
 ---
 
@@ -49,16 +57,28 @@
 <img src="assets/imagenes/terraform_apply_same_image.png" alt="Terraform apply" width="60%">
 </p>
 
-### Acceso a la VM Linux
-- Acceso a VM 01 con Entra ID + RBAC
+### Acceso a las VMs Linux
+- Instalar el plugin Azure CLI SSH
+    ```bash
+    az extension add --upgrade -n ssh
+    az extension show --name ssh
+    ```
+- Login de usuario con permiso de acceder por az ssh
+    ```bash
+    az login --use-device-code
+    ```
+- Verificar cuenta actual 
+    ```bash
+    az account show
+    ```
+- Acceso a VM 01 con Entra ID + RBAC (sin contraseña o llave privada)
     ```bash
     ssh -i ~/.ssh/dummy_key azureuser@13.82.20.171
     ```
     <p align="center">
     <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_01.png" alt="Login VM Linux 01" width="70%">
     </p>
-
-- Acceso a VM 02 con Entra ID + RBAC
+- Acceso a VM 02 con Entra ID + RBAC (sin contraseña o llave privada)
     ```bash
     ssh -i ~/.ssh/dummy_key azureuser@52.168.24.136
     ```
