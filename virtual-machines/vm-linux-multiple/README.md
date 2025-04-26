@@ -74,8 +74,8 @@
 - Acceso a VM 01 con Entra ID + RBAC (sin contraseña o llave privada)
     ```bash
     az ssh vm \
-    --name vm-entraid-demo-eastus-001 \
-    --resource-group rg-vnet-entraid-demo-001
+    --name vm-multiples-demo-1 \
+    --resource-group rg-multiples-demo-001
     ```
     <p align="center">
     <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_01.png" alt="Login VM Linux 01" width="70%">
@@ -83,8 +83,8 @@
 - Acceso a VM 02 con Entra ID + RBAC (sin contraseña o llave privada)
     ```bash
     az ssh vm \
-    --name vm-entraid-demo-eastus-001 \
-    --resource-group rg-vnet-entraid-demo-001
+    --name vm-multiples-demo-2 \
+    --resource-group rg-multiples-demo-001
     ```
     <p align="center">
     <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_02.png" alt="Login VM Linux 02" width="70%">
