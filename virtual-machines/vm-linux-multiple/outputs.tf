@@ -9,7 +9,7 @@ output "vm_count" {
 }
 
 output "resource_group_name" {
-description = "Nombre de Resource Group"
+  description = "Nombre de Resource Group"
   value       = azurerm_resource_group.rg.name
 }
 

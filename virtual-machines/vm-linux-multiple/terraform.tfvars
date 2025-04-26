@@ -3,7 +3,7 @@
 # Asignación de valores a las varibales
 ##-------------------------------------------------
 
-location           = "eastus"
+location            = "eastus"
 service             = "multiples"
 purpose             = "demo"
 vnet_address_space  = ["10.0.0.0/16"]

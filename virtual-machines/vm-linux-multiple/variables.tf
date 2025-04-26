@@ -4,7 +4,7 @@
 ##---------------------------------------------------------------------------
 
 variable "location" {
-description = "Ubicación de los recursos"
+  description = "Ubicación de los recursos"
   type        = string
 }
 
