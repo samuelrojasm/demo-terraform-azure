@@ -73,14 +73,18 @@
     ```
 - Acceso a VM 01 con Entra ID + RBAC (sin contraseña o llave privada)
     ```bash
-    ssh -i ~/.ssh/dummy_key azureuser@13.82.20.171
+    az ssh vm \
+    --name vm-entraid-demo-eastus-001 \
+    --resource-group rg-vnet-entraid-demo-001
     ```
     <p align="center">
     <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_01.png" alt="Login VM Linux 01" width="70%">
     </p>
 - Acceso a VM 02 con Entra ID + RBAC (sin contraseña o llave privada)
     ```bash
-    ssh -i ~/.ssh/dummy_key azureuser@52.168.24.136
+    az ssh vm \
+    --name vm-entraid-demo-eastus-001 \
+    --resource-group rg-vnet-entraid-demo-001
     ```
     <p align="center">
     <img src="assets/imagenes/autenticacion_clasica_clave_SSH_vm_02.png" alt="Login VM Linux 02" width="70%">
