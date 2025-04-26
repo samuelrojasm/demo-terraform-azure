@@ -59,7 +59,7 @@
 
 ### Terraform state list
 <p align="center">
-<img src="assets/imagenes/terraform_state_list.png" alt="Terraform State" width="60%">
+<img src="assets/imagenes/terraform_state_list.png" alt="Terraform State" width="50%">
 </p>
 
 ### Acceso a las VMs Linux
