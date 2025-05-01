@@ -18,6 +18,11 @@ variable "purpose" {
   type        = string
 }
 
+variable "name_storageacct" {
+  description = "Nomnre del Storage Account"
+  type        = string
+}
+
 variable "storage_param" {
   description = "Parametros del Storage Account"
   type = object({
