@@ -17,17 +17,22 @@
 ### Terraform apply (outputs)
 - El output incluirá el nombre del **storage_account** y del **container**, necesarios para configurar el backend remoto en otros proyectos.
 <p align="center">
-<img src="assets/imagenes/terraform_apply_linux_multiple.png" alt="Terraform apply" width="60%">
+<img src="assets/imagenes/blob_outputs.png" alt="Terraform apply" width="60%">
 </p>
 
 ### Terraform state list
 <p align="center">
-<img src="assets/imagenes/terraform_state_list.png" alt="Terraform State" width="50%">
+<img src="assets/imagenes/blob_state_list.png" alt="Terraform State" width="50%">
 </p>
 
-### Storage Account remoto pare el estado de Terraform en Azure Blob Storage
+### Storage Account de Azure Blob Storage
  <p align="center">
-    <img src="assets/imagenes/autenticacion_az_ssh_vm_01.png" alt="Login VM Linux 01" width="70%">
+    <img src="assets/imagenes/blob_stotage_account.png" alt="Storage Account" width="70%">
+    </p>
+
+### Container remoto pare el estado de Terraform en Azure Blob Storage
+ <p align="center">
+    <img src="assets/imagenes/blob_container.png" alt="Container" width="70%">
     </p>
 
 ---
