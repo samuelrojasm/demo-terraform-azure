@@ -1,0 +1,12 @@
+##--------------------------------------------------------------
+# blob-terraform-state
+# Outputs: Datos presentados al final de Terraform apply
+##--------------------------------------------------------------
+
+output "storage_account_name" {
+  value = azurerm_storage_account.storageacct.name
+}
+
+output "container_name" {
+  value = azurerm_storage_container.container.name
+}
