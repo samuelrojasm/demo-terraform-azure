@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "rg" {
 
 # Azure Storage Account
 resource "azurerm_storage_account" "storageacct" {
-  name                = "storageacct${var.name_storageacct}001" # único globalmente
+  name                = "storageacct${var.name_storageacct}01" # único globalmente
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 
