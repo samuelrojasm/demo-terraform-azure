@@ -90,5 +90,5 @@
     az ssh vm \
     --name vm-multiples-demo-2 \
     --resource-group rg-multiples-demo-001
-    ```
+    ``` 
 ---
