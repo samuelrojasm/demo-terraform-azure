@@ -25,7 +25,7 @@
 <img src="assets/imagenes/terraform_state_list.png" alt="Terraform State" width="50%">
 </p>
 
-### Storage remoto pare el estado de Terraform en Azure Blob Storage
+### Storage Account remoto pare el estado de Terraform en Azure Blob Storage
  <p align="center">
     <img src="assets/imagenes/autenticacion_az_ssh_vm_01.png" alt="Login VM Linux 01" width="70%">
     </p>
