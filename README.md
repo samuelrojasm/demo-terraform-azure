@@ -19,6 +19,7 @@
 - [Crear múltiples VM Linux (Entra ID + RBAC)](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/virtual-machines/vm-linux-multiple)
 ### Ejemplos Azure Blob (Binary Large Object) Storage
 - [Blob para backend remoto de Terraform state](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/blob-storage/blob-terraform-state)
+- [Almacenar el estado de Terraform en Azure Storage](https://github.com/samuelrojasm/demo-terraform-azure/tree/main/blob-storage/blob-tf-backend-state)
 
 ## 🚀 **Requisitos**
 - [Terraform](https://developer.hashicorp.com/terraform/downloads)
