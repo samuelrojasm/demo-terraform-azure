@@ -21,7 +21,7 @@
 - Este el bloque de código del  **backend state** que se adiciona en el proyecto de Terraform
     ```hcl
     backend "azurerm" {
-      resource_group_name  = "tfstate"
+      resource_group_name  = "rg-blob-tf-state-demo"
       storage_account_name = "<storage_account_name>"
       container_name       = "tfstate"
       key                  = "terraform.tfstate"
