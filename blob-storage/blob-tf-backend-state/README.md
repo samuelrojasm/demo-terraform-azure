@@ -30,34 +30,16 @@
 ---
 
 ## 🚀 Resultado (Outcome)
-### Terraform apply (outputs)
-- El output incluirá el nombre del **storage_account** y del **container**, necesarios para configurar el backend remoto en otros proyectos.
+### Terraform init
+- Al ejecutar **terraform init** valida los parámetros y acceso al Azure Blob Storage definido en el bloque **backend**
+- Se crea el archivo **terraform.tfstate** en el **Container** tfstate de Azure Blob Storage
 <p align="center">
-<img src="assets/imagenes/blob_outputs.png" alt="Terraform apply" width="60%">
+<img src="assets/imagenes/blob-tf-backend-state.png" alt="Terraform apply" width="60%">
 </p>
-
-### Terraform state list
-<p align="center">
-<img src="assets/imagenes/blob_state_list.png" alt="Terraform State" width="50%">
-</p>
-
-### Storage Account de Azure Blob Storage
- <p align="center">
-    <img src="assets/imagenes/blob_stotage_account.png" alt="Storage Account" width="70%">
-    </p>
-
-### Container remoto pare el estado de Terraform en Azure Blob Storage
- <p align="center">
-    <img src="assets/imagenes/blob_container.png" alt="Container" width="70%">
-    </p>
 
 ---
 
 ## 📚 Referencias
 - [Store Terraform state in Azure Storage](https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage/)
-
----
-
-
 
 ---
