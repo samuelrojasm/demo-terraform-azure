@@ -34,7 +34,7 @@
 - Al ejecutar **terraform init** valida los parámetros y acceso al Azure Blob Storage definido en el bloque **backend**
 - Se crea el archivo **terraform.tfstate** en el **Container** tfstate de Azure Blob Storage
 <p align="center">
-<img src="assets/imagenes/blob-tf-backend-state.png" alt="Terraform apply" width="60%">
+<img src="assets/imagenes/blob-tf-backend-state.png" alt="Terraform apply" width="80%">
 </p>
 
 ---
