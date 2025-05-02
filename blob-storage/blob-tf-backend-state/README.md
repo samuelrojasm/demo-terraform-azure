@@ -18,8 +18,7 @@
     - **`storage_account_name`**: El nombre de Azure Storage account.
     - **`container_name`**: El nombre del blob container.
     - **`key`**: El nombre del archivo del almacenamsiento de estado que se va a generar.
-- Este el bloque de código del  **backend state** que se adiciona en el proyecto de Terraform
-    <br>
+- Este el bloque de código del  **backend state** que se adiciona en el proyecto de Terraform  
     ```hcl
     backend "azurerm" {
       resource_group_name  = "rg-blob-tf-state-demo"
