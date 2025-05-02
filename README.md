@@ -208,4 +208,9 @@
 - [Azure built-in roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
 - [Microsoft Entra built-in roles](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference)
 
+## 📦 Referencias -  Azure Blob Storage
+- [Introduction to Azure Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
+- [Herramientas o productos de Azure Storage](https://azure.microsoft.com/es-es/products/category/storage)
+- [Store Terraform state in Azure Storage](https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli)
+
 ---
